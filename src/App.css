@@ -1,6 +1,7 @@
 .container {
   display: flex;
   flex-direction: column;
+  font-size: larger;
 }
 
 header {
@@ -20,6 +21,7 @@ main {
   width: 100%;
   grid-template-columns: 1fr 1fr 1fr;
   align-self: center;
+  font-family: monospace;
 }
 
 footer {
@@ -31,7 +33,10 @@ footer {
   text-align: right;
 }
 
-input[type=text],input[type=date], input[type=email], select {
+input[type="text"],
+input[type="date"],
+input[type="email"],
+select {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -41,35 +46,40 @@ input[type=text],input[type=date], input[type=email], select {
   box-sizing: border-box;
 }
 
-input[type=submit] {
+input[type="submit"] {
   width: 100%;
-  background-color: #4CAF50;
-  color: white;
+  background-color: #62d6eb;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-size: large;
+  font-family: calibri;
+  text-transform: uppercase;
 }
 
-input[type=submit]:hover {
-  background-color: #45a049;
+input[type="submit"]:hover {
+  background-color: #52dfc0;
+  color: white;
 }
 
 div {
   border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
+  padding: 10px;
+  width: 100%;
 }
 
 .name-group {
   display: flex;
-  border: 1px dashed;
 }
 
+.email-group {
+  padding-left: 0;
+  font-family: monospace;
+}
 .gender-group {
   display: flex;
-  border: 1px dashed;
   align-items: center;
   justify-content: center;
 }
@@ -78,8 +88,10 @@ div {
 }
 .name-group input {
   margin: 10px;
-  border-bottom: 1px solid;
+  font-family: consolas;
+  border-bottom: 2px solid dimgray;
   border-top: none;
+  border-radius: 0;
   border-right: none;
   border-left: none;
   background-color: transparent;
@@ -90,4 +102,28 @@ div {
   padding-right: 10px;
   background-color: transparent;
   text-transform: uppercase;
+}
+
+.onboarding-container {
+  border: 1px solid silver;
+  border-top-left-radius:0 ;
+  border-bottom-left-radius:0 ;
+  border-left: none;
+}
+hr {
+  background-color: silver;
+  width: 100%;
+}
+
+.mid-content {
+  display: flex;
+}
+.img-card {
+  border:1px solid white;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  background-image: url('./components/img1.jpg');
+  background-position: center;
+  background-size: cover;
+  width: 50%;
 }

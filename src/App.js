@@ -6,14 +6,15 @@ function App() {
     <>
       <div className="container">
         <header>The Notorious Bank</header>
+          <h1>CUSTOMER ONBOARDING</h1>
         <main>
+
           <div></div>
-          
-          <div>
-            <h1>Register</h1>
+          <div className="mid-content">
+            <div className="img-card"></div>
+            
             <RegistrationComponent />
           </div>
-          <div></div>
         </main>
         <footer>Made with 💘 by @MayurRavindram</footer>
       </div>

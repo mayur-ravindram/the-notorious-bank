@@ -26,59 +26,61 @@ const RegistrationComponent = () => {
   };
   return (
     <>
-      <h3>This is Registration Component</h3>
+      <div className="onboarding-container">
+        <label htmlFor="fname">Participant Name</label>
+        <div className="name-group">
+          <input
+            type="text"
+            id="fname"
+            name="firstname"
+            placeholder="first name.."
+          />
+          <input
+            type="text"
+            id="mname"
+            name="middlename"
+            placeholder="middle name.."
+          />
+          <input
+            type="text"
+            id="lname"
+            name="lastname"
+            placeholder="last name.."
+          />
+        </div>
+        <br />
+        <br />
+        <hr />
+        <label htmlFor="gender">Gender</label>
+        <div className="gender-group">
+          <input type="radio" id="male" name="gender" value="male" />
+          <label htmlFor="male">Male</label>
+          <input type="radio" id="female" name="gender" value="female" />
+          <label htmlFor="female">Female</label>
+          <input type="radio" id="other" name="gender" value="other" />
+          <label htmlFor="other">Other</label>
+        </div>
 
-      <label for="fname">Name</label>
-      <div className="name-group">
+        <label htmlFor="dob">Date of Birth</label>
+        <input type="date" />
+
+        <hr />
+        <div className="email-group">
+          <label htmlFor="email">Email</label>
+          <input type="email" placeholder="Enter valid email" />
+        </div>
+        <label htmlFor="aadhar">Aadhar ID</label>
         <input
           type="text"
-          id="fname"
-          name="firstname"
-          placeholder="first name.."
+          placeholder="XXXX XXXX XXXX XXXX"
+          pattern="\d{4} \d{4} \d{4} \d{4}"
+          className="masked"
+          title="16-digit number"
         />
-        <input
-          type="text"
-          id="mname"
-          name="middlename"
-          placeholder="middle name.."
-        />
-        <input
-          type="text"
-          id="lname"
-          name="lastname"
-          placeholder="last name.."
-        />
+        <br />
+        <br />
+        <input type="submit" value="Submit" onClick={handleClick} />
       </div>
-      <br />
-      <br />
-      <label for="gender">Gender</label>
-      <div className="gender-group">
-        <input type="radio" id="male" name="gender" value="male" />
-        <label for="male">Male</label>
-        <input type="radio" id="female" name="gender" value="female" />
-        <label for="female">Female</label>
-        <input type="radio" id="other" name="gender" value="other" />
-        <label for="other">Other</label>
-      </div>
-      <br />
-      <br />
-
-      <label for="dob">Date of Birth</label>
-      <input type="date" />
-
-      <label for="email">Email</label>
-      <input type="email" />
-
-      <label for="aadhar">Aadhar ID</label>
-      <input
-        type="text"
-        placeholder="XXXX XXXX XXXX XXXX"
-        pattern="\d{4} \d{4} \d{4} \d{4}"
-        class="masked"
-        title="16-digit number"
-      />
-
-      <input type="submit" value="Submit" onClick={handleClick} />
     </>
   );
 };
