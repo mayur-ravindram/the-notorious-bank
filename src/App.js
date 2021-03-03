@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import "./App.css";
+import RegistrationComponent from "./components/RegistrationComponent";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="container">
+        <header>The Notorious Bank</header>
+          <h1>CUSTOMER ONBOARDING</h1>
+        <main>
+
+          <div></div>
+          <div className="mid-content">
+            <div className="img-card"></div>
+            
+            <RegistrationComponent />
+          </div>
+        </main>
+        <footer>Made with 💘 by @MayurRavindram</footer>
+      </div>
+    </>
   );
 }
 
