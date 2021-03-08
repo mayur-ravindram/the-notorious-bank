@@ -1,36 +1,46 @@
 .container {
   display: flex;
   flex-direction: column;
-  font-size: larger;
+  align-items: center;
 }
+
 
 header {
   top: 0;
-  position: sticky;
+  position: relative;
   height: 100px;
-  background-color: beige;
-  box-shadow: 10px 10px 8px #8888;
+  box-shadow: 0 5px 7px 0 silver;
   padding: auto;
   font-family: grand hotel;
-  font-size: xxx-large;
+  font-size: 5rem;
   text-align: center;
+  width: 75%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 20px;
 }
 
 main {
-  display: grid;
-  width: 100%;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-self: center;
+  margin-top: 5%;
+  display: flex;
+  flex-direction: row;
   font-family: monospace;
+  justify-content: center;
+  font-size: large;
 }
 
 footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  margin-bottom: 10px;
-  width: 100%;
+  height: 100px;
   text-align: right;
+  
+}
+
+form {
+  border : 1px solid transparent;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #ffffff;
 }
 
 input[type="text"],
@@ -46,6 +56,9 @@ select {
   box-sizing: border-box;
 }
 
+label {
+  text-transform: uppercase;
+}
 input[type="submit"] {
   width: 100%;
   background-color: #62d6eb;
@@ -67,7 +80,6 @@ input[type="submit"]:hover {
 div {
   border-radius: 5px;
   padding: 10px;
-  width: 100%;
 }
 
 .name-group {
@@ -80,8 +92,6 @@ div {
 }
 .gender-group {
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .gender-group * {
   margin: 10px;
@@ -104,26 +114,154 @@ div {
   text-transform: uppercase;
 }
 
-.onboarding-container {
-  border: 1px solid silver;
-  border-top-left-radius:0 ;
-  border-bottom-left-radius:0 ;
-  border-left: none;
-}
 hr {
   background-color: silver;
   width: 100%;
 }
 
 .mid-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 10px 10px 0 0;
+  
+}
+
+.aside-header {
+  margin-bottom: 10px;
+  background-color: #62d6eb;
+  width: 100%;
+  box-shadow: 5px 0 4px silver;
+  text-align: center;
+}
+
+.aside-header p {
+  color: white;
+  font-family: adinda melia;
+  font-size: x-large;
+  font-weight: bold;
+}
+.dashboard {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 50px;
+  grid-template-areas:
+    "dash-header"
+    "dash-main"
+    "dash-footer";
+  width: 75%;
+}
+
+.dash-header {
+  height: 100px;
+  grid-area: dash-header;
   display: flex;
 }
+
+.dash-main {
+  grid-area: dash-main;
+  background-color: #8fd4d9;
+}
+
+.dash-main-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+  padding: 20px;
+  height: 150px; /* Force our height since we don't have actual content yet */
+  background-color: #e3e4e6;
+  color: slategray;
+}
+
+.dash-main-header__heading {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-grow: 1;
+  align-items: center;
+}
+
+.dash-main-header__heading-items {
+  margin: 0;
+}
+
+
+.dash-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  background-color: skyblue;
+}
+
+.onboarding-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  border: 1px solid silver;
+  box-shadow: 5px 5px 4px silver;
+  border-radius: 5px;
+  width: 100%;
+}
+
+
 .img-card {
-  border:1px solid white;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  background-image: url('./components/img1.jpg');
+  background-image: url("./assets/space_shuttle.png");
   background-position: center;
   background-size: cover;
-  width: 50%;
+  width: 100%;
+  padding: 0;
+  border-radius: 0;
+  border-radius: 5px;
 }
+
+.registration-container {
+  margin: auto;
+}
+
+.flex-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card-item {
+  display: flex;
+  height: 100px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100px;
+  background-color: salmon;
+  text-align: center;
+}
+
+.card-item + .card-item {
+  margin-left: 2%;
+}
+
+.card-item-center {
+  flex-grow: 1; /* Set the middle element to grow and stretch */
+  background-color: #52dfc0;
+}
+
+.d-m-h-header {
+  font-size: large;
+}
+
+.d-m-h-header span {
+  font-size: x-large;
+  font-family: monospace;
+  color: blue;
+  background-color: yellow;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+
+div > span {
+  font-family: monospace;
+}
+

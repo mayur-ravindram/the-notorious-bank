@@ -1,23 +1,34 @@
-import React from "react";
+import { Route } from "react-router-dom";
 import "./App.css";
+import Dashboard from "./components/Dashboard";
+import LandingPage from "./components/LandingPage";
 import RegistrationComponent from "./components/RegistrationComponent";
+import TransferComponent from "./components/TransferComponent";
 function App() {
   return (
     <>
       <div className="container">
-        <header>The Notorious Bank</header>
-          <h1>CUSTOMER ONBOARDING</h1>
-        <main>
+        <header>
+          The Notorious Bank
+        </header>
 
-          <div></div>
-          <div className="mid-content">
-            <div className="img-card"></div>
-            
+        <main>
+          <Route exact path="/">
+            <LandingPage />
+          </Route>
+          <Route path="/register">
             <RegistrationComponent />
-          </div>
+          </Route>
+          {/* <div className="mid-content"></div> */}
         </main>
-        <footer>Made with 💘 by @MayurRavindram</footer>
+        <Route path="/dashboard">
+          <Dashboard />
+        </Route>
+        <Route path="/transfers">
+          <TransferComponent />
+        </Route>
       </div>
+      <footer>Made with 💘 by @MayurRavindram</footer>
     </>
   );
 }
